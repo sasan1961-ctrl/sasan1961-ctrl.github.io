@@ -205,6 +205,18 @@ footer .concept{border-top:1px solid var(--line);padding-top:18px}
 .field.full{grid-column:1/-1}
 .rules{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
 .rule-card,.near-card,.cost-card,.tour-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 0}
+.step3{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
+.step3 .step3-num{font-weight:900;color:var(--forest2);font-size:.88rem}
+@media (prefers-color-scheme: dark){.step3 .step3-num{color:#8fc7a6}}
+.step3 h3{font-size:1.05rem;font-weight:800;margin:5px 0 6px}
+.step3 p{color:var(--muted);font-size:.92rem;margin:0}
+.resp-note{color:var(--muted);font-size:.92rem;margin:14px 0 0}
+.panoee-slot{margin-top:14px;border:1.5px dashed var(--line);border-radius:var(--radius);padding:18px 20px;background:var(--surface);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.panoee-slot h3{margin:0 0 4px;font-size:1.05rem;font-weight:800}
+.panoee-slot p{margin:0;color:var(--muted);font-size:.92rem;max-width:44em}
+.group-note{color:var(--ink);font-weight:800}
+@media (max-width:820px){.steps3{grid-template-columns:1fr}}
 .near-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
 .near-card h3,.rule-card h3,.cost-card h3{font-size:1.05rem;font-weight:800;margin-bottom:6px}
 .near-card p,.rule-card p,.cost-card p{color:var(--muted);margin:0;font-size:.93rem}
@@ -413,6 +425,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     <a href="#senses">حس‌ها</a>
     <a href="#planner">برنامه‌ساز سفر</a>
     <a href="#gallery">گالری</a>
+    <a href="#pano360">تور ۳۶۰</a>
     <a href="#pricing">نرخ نمونه</a>
     <a href="#booking">تقویم رزرو</a>
     <a href="#nearby">اطراف خانه</a>
@@ -628,7 +641,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <section id="pano360">
     <div class="sec-head" data-reveal>
       <p class="kicker">تور مجازی</p>
-      <h2>نمایش ۳۶۰ درجه</h2>
+      <h2>تور مجازی ۳۶۰ درجه</h2>
       <p>داخل اتاق بایست و دور خودت بچرخ؛ عکس ۳۶۰ درجه داخل یک کره سه‌بعدی قرار گرفته تا مهمان پیش از رزرو، حس واقعی فضا را بگیرد — نه فقط چند قاب ثابت.</p>
     </div>
     <div class="pano-box" data-reveal>
@@ -638,51 +651,12 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
         <span class="pano-sample">عکس ۳۶۰ نمونه آزمایشی — برای نمایش، نه عکس فروش</span>
       </div>
     </div>
-  </section>
-
-  <!-- AMENITIES -->
-  <section id="amenities">
-    <div class="sec-head" data-reveal>
-      <p class="kicker">امکانات اقامت</p>
-      <h2>هرچه مهمان برای اقامت راحت لازم دارد</h2>
-      <p>فهرست نمونه امکانات؛ در نسخه واقعی هر واحد، فقط امکاناتی می‌آید که واقعاً در آن واحد وجود دارد.</p>
-    </div>
-    <div class="amen" data-reveal>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"/><path d="M8.5 16.4a5 5 0 0 1 7 0"/><path d="M5 12.9a10 10 0 0 1 14 0"/><path d="M1.6 9.4a15 15 0 0 1 20.8 0"/></svg> وای‌فای</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 3A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg> پارکینگ</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg> آشپزخانه کامل</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="6" rx="2"/><path d="M6 14v2"/><path d="M12 14v5"/><path d="M18 14v3"/></svg> سرمایش و گرمایش</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M9 6h.01"/></svg> ماشین لباسشویی</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg> تلویزیون</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg> ملحفه و رختخواب</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v1a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-1Z"/><path d="M6 12V5a2 2 0 0 1 4 0"/><path d="M5 21l1-3"/><path d="M19 21l-1-3"/></svg> حمام اختصاصی</div>
-    </div>
-  </section>
-
-  <!-- SLEEPING -->
-  <section id="sleep">
-    <div class="sec-head" data-reveal>
-      <p class="kicker">چیدمان خواب</p>
-      <h2>هرکس کجا می‌خوابد؟</h2>
-      <p>چیدمان نمونه این واحد برای ظرفیت ۶ نفر؛ در نسخه واقعی، تخت و خواب هر اتاق دقیقاً از خود واحد نوشته می‌شود.</p>
-    </div>
-    <div class="sleep-grid">
-      <article class="sleep-card" data-reveal>
-        <h3>اتاق خواب اصلی — ۲ نفر</h3>
-        <p>یک تخت دونفره با چشم‌انداز کوهستان؛ مناسب زوج‌ها و پدر و مادر خانواده.</p>
-      </article>
-      <article class="sleep-card" data-reveal>
-        <h3>نشیمن — تا ۲ نفر</h3>
-        <p>کاناپه تخت‌خواب‌شو در نشیمن رو به جنگل؛ برای مهمان‌های جوان‌تر گروه.</p>
-      </article>
-      <article class="sleep-card" data-reveal>
-        <h3>تخت اضافه — تا ۲ نفر</h3>
-        <p>دو تخت تاشوی اضافه برای رسیدن به سقف ظرفیت نمونه (۶ نفر)؛ نفر پنجم و ششم با هزینه نمونه مهمان اضافه در تقویم محاسبه می‌شوند.</p>
-      </article>
-      <article class="sleep-card" data-reveal>
-        <h3>رختخواب و ملحفه</h3>
-        <p>ملحفه و رختخواب تمیز برای همه تخت‌ها جزو امکانات نمونه این واحد است و هزینه جدا ندارد.</p>
-      </article>
+    <div class="panoee-slot" data-reveal>
+      <div>
+        <h3>تور اتاق‌به‌اتاق خانه</h3>
+        <p>تور کامل خانه که مهمان در آن از اتاقی به اتاق دیگر می‌رود، در همین بخش قرار می‌گیرد؛ نمایشگر بالا فعلاً خود خانه را ۳۶۰ درجه نشان می‌دهد.</p>
+      </div>
+      <span class="sample-tag">جای لینک تور Panoee — به‌زودی</span>
     </div>
   </section>
 
@@ -705,7 +679,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
         </tbody>
       </table>
     </div>
-    <p style="color:var(--muted);margin-top:12px">حداقل اقامت در این نمونه: <strong style="color:var(--ink)">۲ شب</strong> · ظرفیت پایه: ۴ مهمان · حداکثر ظرفیت: ۶ مهمان</p>
+    <p style="color:var(--muted);margin-top:12px">حداقل اقامت در این نمونه: <strong style="color:var(--ink)">۲ شب</strong> · ظرفیت پایه: ۴ مهمان · حداکثر ظرفیت: ۶ مهمان · <span class="group-note">گروه ۷ نفر و بیشتر؟ در واتساپ بپرسید.</span></p>
   </section>
 
   <!-- BOOKING -->
@@ -715,6 +689,24 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
       <h2>تاریخ را انتخاب کنید، هزینه نمونه را همان لحظه ببینید</h2>
       <p>امروز در این نمونه <strong>۲۰ آبان ۱۴۰۵</strong> در نظر گرفته شده است؛ روزهای گذشته بسته‌اند و انتخاب فقط رو به آینده است. اول روز ورود و بعد روز خروج را بزنید. <strong>نرخ هر شب، زیر عدد همان تاریخ در تقویم نوشته شده است</strong> — مثل تقویم قیمت پلتفرم‌های رزرو؛ عددها به هزار تومان‌اند (۹۰۰ یعنی ۹۰۰ هزار تومان) و نقطه سبز یعنی ارزان‌ترین شب‌ها. اقامت ۷ شب و بیشتر هم ۱۰٪ تخفیف نمونه روی اجاره می‌گیرد.</p>
     </div>
+    <div class="steps3" data-reveal aria-label="رزرو در سه قدم">
+      <article class="step3">
+        <span class="step3-num">قدم ۱</span>
+        <h3>تاریخ را بزنید</h3>
+        <p>روز ورود و خروج را در تقویم پایین انتخاب کنید؛ جمع هزینه نمونه همان لحظه دیده می‌شود.</p>
+      </article>
+      <article class="step3">
+        <span class="step3-num">قدم ۲</span>
+        <h3>درخواست را در واتساپ بفرستید</h3>
+        <p>متن آماده درخواست را بسازید و با دکمه واتساپ مستقیم برای مالک بفرستید.</p>
+      </article>
+      <article class="step3">
+        <span class="step3-num">قدم ۳</span>
+        <h3>مالک تأیید می‌کند</h3>
+        <p>اول هماهنگی و پاسخ پرسش‌ها، بعد پرداخت؛ رزرو فقط با تأیید مالک نهایی می‌شود.</p>
+      </article>
+    </div>
+    <p class="resp-note" data-reveal>زمان پاسخ مالک: <span class="sample-tag">نمونه — زمان پاسخ واقعی مالک در نسخه اختصاصی اینجا می‌آید</span></p>
     <div class="booking" data-reveal>
       <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
         <span class="sample-tag">نرخ نمونه آزمایشی — نه قیمت واقعی</span>
@@ -771,6 +763,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
           <div class="field"><label for="fGuests">تعداد مهمان</label>
             <select id="fGuests"><option value="1">۱ نفر</option><option value="2">۲ نفر</option><option value="3">۳ نفر</option><option value="4" selected>۴ نفر (ظرفیت پایه)</option><option value="5">۵ نفر (۱ نفر اضافه)</option><option value="6">۶ نفر (۲ نفر اضافه — حداکثر)</option></select>
             <p style="color:var(--muted);font-size:.85rem;margin:4px 0 0">ظرفیت پایه ۴ نفر است؛ نفر پنجم و ششم با هزینه نمونه مهمان اضافه محاسبه می‌شود.</p>
+            <p style="font-size:.88rem;margin:6px 0 0"><span class="group-note">گروه ۷ نفر و بیشتر؟ در واتساپ بپرسید.</span></p>
           </div>
           <div class="field full"><label for="fNotes">یادداشت برای مالک (اختیاری)</label><textarea id="fNotes" rows="3" placeholder="ساعت تقریبی رسیدن، نیاز خاص یا پرسش شما"></textarea></div>
         </div>
@@ -801,6 +794,52 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
       <article class="rule-card" data-reveal><h3>ساعت ورود: ۱۴:۰۰</h3><p>تحویل خانه از ساعت ۱۴:۰۰ روز ورود است.</p></article>
       <article class="rule-card" data-reveal><h3>ساعت خروج: ۱۲:۰۰</h3><p>تخلیه خانه تا ساعت ۱۲:۰۰ روز خروج است.</p></article>
       <article class="rule-card" data-reveal><h3>حداقل اقامت: ۲ شب</h3><p>درخواست کمتر از ۲ شب در این نمونه پذیرفته نمی‌شود و تقویم همان‌جا خطا نشان می‌دهد.</p></article>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section id="amenities">
+    <div class="sec-head" data-reveal>
+      <p class="kicker">امکانات اقامت</p>
+      <h2>هرچه مهمان برای اقامت راحت لازم دارد</h2>
+      <p>فهرست نمونه امکانات؛ در نسخه واقعی هر واحد، فقط امکاناتی می‌آید که واقعاً در آن واحد وجود دارد.</p>
+    </div>
+    <div class="amen" data-reveal>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"/><path d="M8.5 16.4a5 5 0 0 1 7 0"/><path d="M5 12.9a10 10 0 0 1 14 0"/><path d="M1.6 9.4a15 15 0 0 1 20.8 0"/></svg> وای‌فای</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 3A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg> پارکینگ</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg> آشپزخانه کامل</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="6" rx="2"/><path d="M6 14v2"/><path d="M12 14v5"/><path d="M18 14v3"/></svg> سرمایش و گرمایش</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M9 6h.01"/></svg> ماشین لباسشویی</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg> تلویزیون</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg> ملحفه و رختخواب</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v1a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-1Z"/><path d="M6 12V5a2 2 0 0 1 4 0"/><path d="M5 21l1-3"/><path d="M19 21l-1-3"/></svg> حمام اختصاصی</div>
+    </div>
+  </section>
+
+  <!-- SLEEPING -->
+  <section id="sleep">
+    <div class="sec-head" data-reveal>
+      <p class="kicker">چیدمان خواب</p>
+      <h2>هرکس کجا می‌خوابد؟</h2>
+      <p>چیدمان نمونه این واحد برای ظرفیت ۶ نفر؛ در نسخه واقعی، تخت و خواب هر اتاق دقیقاً از خود واحد نوشته می‌شود.</p>
+    </div>
+    <div class="sleep-grid">
+      <article class="sleep-card" data-reveal>
+        <h3>اتاق خواب اصلی — ۲ نفر</h3>
+        <p>یک تخت دونفره با چشم‌انداز کوهستان؛ مناسب زوج‌ها و پدر و مادر خانواده.</p>
+      </article>
+      <article class="sleep-card" data-reveal>
+        <h3>نشیمن — تا ۲ نفر</h3>
+        <p>کاناپه تخت‌خواب‌شو در نشیمن رو به جنگل؛ برای مهمان‌های جوان‌تر گروه.</p>
+      </article>
+      <article class="sleep-card" data-reveal>
+        <h3>تخت اضافه — تا ۲ نفر</h3>
+        <p>دو تخت تاشوی اضافه برای رسیدن به سقف ظرفیت نمونه (۶ نفر)؛ نفر پنجم و ششم با هزینه نمونه مهمان اضافه در تقویم محاسبه می‌شوند.</p>
+      </article>
+      <article class="sleep-card" data-reveal>
+        <h3>رختخواب و ملحفه</h3>
+        <p>ملحفه و رختخواب تمیز برای همه تخت‌ها جزو امکانات نمونه این واحد است و هزینه جدا ندارد.</p>
+      </article>
     </div>
   </section>
 
@@ -842,18 +881,6 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     </div>
   </section>
 
-  <!-- VIRTUAL TOUR -->
-  <section id="tour">
-    <div class="sec-head" data-reveal>
-      <p class="kicker">تور مجازی ۳۶۰ درجه</p>
-      <h2>جای تور مجازی اینجاست</h2>
-    </div>
-    <div class="tour-card" data-reveal style="margin-top:26px">
-      <p style="color:var(--muted);margin:0 0 14px">در نسخه واقعی، پیوند تور مجازی واحد (که مهمان آنلاین باز می‌کند و اتاق‌به‌اتاق می‌چرخد) دقیقاً در این بخش قرار می‌گیرد. در این نمونه هنوز تور واقعی از این خانه وجود ندارد، پس به‌جای تور ساختگی، فضاهای خانه را در بخش تعاملی بالای صفحه ببینید:</p>
-      <a class="btn btn-forest" href="#spaces">دیدن فضاهای اقامت</a>
-    </div>
-  </section>
-
   <!-- HOST -->
   <section id="host">
     <div class="sec-head" data-reveal>
@@ -890,31 +917,6 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     </div>
   </section>
 
-  <!-- GUIDE -->
-  <section id="guide">
-    <div class="sec-head" data-reveal>
-      <p class="kicker">برای صاحب واحد</p>
-      <h2>این صفحه برای واحد شما چه می‌کند؟</h2>
-    </div>
-    <div class="guide">
-      <article data-reveal>
-        <span class="num">۱</span>
-        <h3>یک لینک، به‌جای ده‌ها عکس پراکنده</h3>
-        <p>لینک صفحه را در واتساپ برای مهمان می‌فرستید؛ همه فضاها، چشم‌انداز و حس خانه یک‌جا و مرتب دیده می‌شود.</p>
-      </article>
-      <article data-reveal>
-        <span class="num">۲</span>
-        <h3>تصمیم سریع‌تر مهمان</h3>
-        <p>مهمانی که خانه را پیش از پرسیدن قیمت دیده، کمتر بین چند واحد مردد می‌ماند و گفت‌وگو کوتاه‌تر می‌شود.</p>
-      </article>
-      <article data-reveal>
-        <span class="num">۳</span>
-        <h3>ظاهر حرفه‌ای‌تر از رقبا</h3>
-        <p>بیشتر واحدها فقط چند عکس در آگهی دارند. یک صفحه اختصاصی، واحد شما را از همان فهرست جدا می‌کند.</p>
-      </article>
-    </div>
-  </section>
-
   <!-- CHECKLIST -->
   <section id="checklist">
     <div class="sec-head" data-reveal>
@@ -934,66 +936,6 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     </ul>
   </section>
 
-  <!-- COMPARE (for owners) -->
-  <section id="compare">
-    <div class="sec-head" data-reveal>
-      <p class="kicker">مقایسه برای صاحب واحد</p>
-      <h2>صفحه اختصاصی، در برابر آگهی معمولی</h2>
-      <p>چرا یک لینک اختصاصی، گفت‌وگوی رزرو را از آگهی‌های معمولی جلو می‌اندازد؟</p>
-    </div>
-    <div class="cmp-wrap" data-reveal>
-      <table class="cmp">
-        <thead><tr><th>موضوع</th><th>آگهی معمولی</th><th>صفحه اختصاصی (همین نمونه)</th></tr></thead>
-        <tbody>
-          <tr><td><strong>معرفی فضاها</strong></td><td>چند عکس پراکنده در میان ده‌ها آگهی دیگر</td><td>هر فضا با عکس، توضیح و چیدمان خواب جدا</td></tr>
-          <tr><td><strong>قیمت</strong></td><td>مهمان باید پیام بدهد و منتظر جواب بماند</td><td>تقویم قیمت؛ نرخ هر شب زیر همان تاریخ و جمع هزینه همان لحظه دیده می‌شود</td></tr>
-          <tr><td><strong>اعتماد مهمان</strong></td><td>ترس از ناهماهنگی عکس و واقعیت</td><td>تور مجازی و گالری کامل، پیش از هر پیامی</td></tr>
-          <tr><td><strong>شروع گفت‌وگو</strong></td><td>پرسش‌های تکراری یکی‌یکی در چت</td><td>درخواست آماده با تاریخ، تعداد مهمان و پرسش‌های انتخابی</td></tr>
-          <tr><td><strong>هویت واحد</strong></td><td>واحد شما یکی از صدها نتیجه جستجو است</td><td>یک لینک با نام و حس خود خانه؛ قابل ارسال در واتساپ</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ONLINE / COSTS -->
-  <section id="online">
-    <div class="sec-head" data-reveal>
-      <p class="kicker">آنلاین‌کردن صفحه</p>
-      <h2>این صفحه چطور دائمی آنلاین می‌ماند و هزینه‌اش چقدر است؟</h2>
-      <p>سه راه اصلی هست؛ دو راه اول رایگان‌اند و برای شروع و نشان‌دادن نمونه به مالک‌ها کافی‌اند. ارقام راه سوم تقریبی است و هنگام خرید باید از شرکت هاستینگ استعلام شود.</p>
-    </div>
-    <div class="cost-grid">
-      <article class="cost-card" data-reveal>
-        <h3>۱ ـ پیوند اشتراک Muse</h3><div class="cost-price">۰ تومان</div>
-        <p>همین صفحه‌ای که الان می‌بینید با یک پیوند دائمی کار می‌کند و برای مهمان فرستاده می‌شود. هزینه ندارد، ولی صفحه به حساب Muse وابسته است و دامنه اختصاصی شما نیست.</p>
-        <p style="margin-top:8px"><strong style="color:var(--ink)">مناسب برای:</strong> شروع فوری و تست با مالک‌ها.</p>
-      </article>
-      <article class="cost-card" data-reveal>
-        <h3>۲ ـ GitHub Pages</h3><div class="cost-price">۰ تومان</div>
-        <p>فایل صفحه روی GitHub Pages گذاشته می‌شود و یک پیوند دائمی رایگان می‌گیرد؛ کارت بانکی نمی‌خواهد. راه‌اندازی‌اش فنی‌تر است و نشانی آن، دامنه اختصاصی شما نیست.</p>
-        <p style="margin-top:8px"><strong style="color:var(--ink)">مناسب برای:</strong> نسخه رایگان مستقل و دائمی.</p>
-        <p style="margin-top:10px"><span class="sample-tag">وضعیت تست: حساب گیت‌هاب وصل شد — sasan1961-ctrl</span></p>
-        <p style="margin-top:10px"><strong style="color:var(--ink)">قدم‌های تست روی گوشی:</strong></p>
-        <ol style="margin:6px 0 0;padding-inline-start:20px;color:var(--muted);font-size:.93rem;line-height:2">
-          <li>یک مخزن (Repository) تازه در گیت‌هاب بسازید و آن را Public بگذارید.</li>
-          <li>فایل <strong style="color:var(--ink)">index.html</strong> و پوشه <strong style="color:var(--ink)">assets</strong> (عکس‌های صفحه) را در همان مخزن بارگذاری کنید؛ بدون پوشه عکس‌ها، صفحه بدون تصویر باز می‌شود.</li>
-          <li>در Settings مخزن، بخش Pages را باز کنید و انتشار از شاخه main را فعال کنید.</li>
-          <li>چند دقیقه صبر کنید تا پیوند صفحه ساخته شود؛ نشانی آن این‌طوری می‌شود: <span dir="ltr" style="unicode-bidi:embed">sasan1961-ctrl.github.io/نام‌مخزن</span></li>
-          <li>پیوند را روی گوشی، از داخل ایران و بدون واسطه، باز کنید و سه چیز را چک کنید: عکس‌ها کامل می‌آیند، تقویم رزرو کار می‌کند و دکمه واتساپ متن درخواست را باز می‌کند.</li>
-        </ol>
-      </article>
-      <article class="cost-card" data-reveal>
-        <h3>۳ ـ هاست ایرانی + دامنه ‎.ir‎</h3><div class="cost-price">حدود ۱۱۰ تا ۱۸۰ هزار تومان / ماه</div>
-        <p>هاست اشتراکی ایرانی حدوداً در همین بازه ماهانه است، به‌علاوه هزینه سالانه جداگانه دامنه ‎.ir‎ (متغیر و نیازمند استعلام روز). مالکیت کامل با خودتان است و صفحه از داخل ایران معمولاً راحت‌تر باز می‌شود.</p>
-        <p style="margin-top:8px"><strong style="color:var(--ink)">پیشنهاد برای بودجه فعلی:</strong> این راه به فاز دوم بماند؛ اول با دو راه رایگان شروع کنید و وقتی مشتری واقعی آمد، دامنه و هاست بخرید.</p>
-      </article>
-    </div>
-    <div class="rule-card" style="margin-top:14px" data-reveal>
-      <h3>یک مرز مهم: چه چیزی به «بک‌اند» نیاز دارد؟</h3>
-      <p>این صفحه یک صفحه ثابت (استاتیک) است: نمایش خانه، تقویم انتخاب تاریخ و آماده‌کردن متن درخواست همین‌جا انجام می‌شود. اما <strong style="color:var(--ink)">همگام‌سازی زنده رزروها</strong> (این‌که تاریخی که یک مهمان گرفت، برای بقیه خودکار بسته شود) و <strong style="color:var(--ink)">درگاه پرداخت آنلاین</strong> به سامانه سمت سرور (بک‌اند) و هزینه و نگهداری جدا نیاز دارد و در فاز بعدی اضافه می‌شود. تا آن زمان، تأیید نهایی هر درخواست با تماس یا واتساپ مالک است.</p>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section id="faq">
     <div class="sec-head" data-reveal>
@@ -1011,8 +953,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <!-- FINAL -->
   <div class="final">
     <div>
-      <h2>این فقط یک نمونه است؛ نسخه بعدی می‌تواند خانه شما باشد.</h2>
-      <p>با عکس‌های واقعی واحدتان، همین چیدمان تبدیل به صفحه معرفی اختصاصی شما می‌شود؛ آماده ارسال برای هر مهمان.</p>
+      <h2>خانه را دیدید؛ حالا تاریخ سفرتان را انتخاب کنید.</h2>
+      <p>تقویم و نرخ‌های نمونه همین بالای صفحه است؛ تاریخ را بزنید، هزینه را همان لحظه ببینید و درخواست را در واتساپ برای مالک بفرستید.</p>
     </div>
     <a class="btn btn-gold" href="#booking">امتحان تقویم رزرو</a>
   </div>
